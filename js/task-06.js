@@ -1,8 +1,12 @@
-const validationInput = document.querySelector("#validation-input");
-validationInput.addEventListener("blur", () => {
-    validationInput.classList.toggle("valid", validationInput.value.length >= 6 );
-    validationInput.classList.toggle("invalid", validationInput.value.length < 6 )
-})
+const input = document.querySelector("#validation-input");
+
+input.addEventListener("blur", (event) => {
+  if (event.target.value.length < input.dataset.length) {
+    event.target.style.borderColor = "#f44336";
+  } else {
+    event.target.style.borderColor = "#4caf50";
+  }
+});
 
 
 
