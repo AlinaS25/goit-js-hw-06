@@ -14,7 +14,6 @@ function form() {
     alert("Всі поля повинні бути заповнені!");
   } else {
     const obj = { email: email.value, password: password.value };
-    console.log(obj);
     formEl.reset();
   }
 }

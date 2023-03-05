@@ -22,4 +22,3 @@ const makeImagesCard = ({
 const listEl = document.querySelector('.gallery');
 const makeImagesMarkup = images.map((data) => makeImagesCard(data)).join('');
 listEl.insertAdjacentHTML('afterbegin', makeImagesMarkup);
-console.log(makeImagesMarkup);
