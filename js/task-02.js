@@ -1,17 +1,17 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
-const listEl = document.querySelector('#ingredients');
-const itemsArray = [];
-ingredients.forEach(el => {
-  const itemEl = document.createElement('li');
-  itemEl.textContent = el;
-  itemEl.classList.add('item');
-  itemsArray.push(itemEl);
+
+const listEl = document.querySelector("#ingredients");
+
+ingredients.forEach((element) => {
+  const listItemEl = document.createElement("li");
+  listEl.append(listItemEl);
+  listItemEl.classList.add("item");
+  listItemEl.append(element);
 });
-listEl.append(...itemsArray);
