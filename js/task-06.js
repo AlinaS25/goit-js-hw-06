@@ -1,14 +1,25 @@
 const input = document.querySelector("#validation-input");
 
-input.addEventListener("blur", (event) => {
-  if (event.target.value.length < input.dataset.length) {
-    event.target.style.borderColor = "#f44336";
+const borderInputValid = document.querySelector('#validation-input.valid');
+
+let inputLength = 0;
+
+const handleMakeInput = (event) => {
+
+  if (inputLength === Number(inputData.getAttribute('data-length'))){
+    event.target.classList.remove('invalid');
+    event.target.classList.add('valid');
+
   } else {
-    event.target.style.borderColor = "#4caf50";
+    event.target.classList.remove('invalid');
+    event.target.classList.add('valid');
   }
-});
 
-
+}
+inputData.addEventListener('input', (event) => {
+  inputLength = event.currentTarget.value.length;
+})
+inputData.addEventListener('blur', handleMakeInput);
 
 
 
